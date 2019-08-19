@@ -11,4 +11,4 @@ ADD deploy.sh /deploy.sh
 
 RUN chmod +x /deploy.sh 
 
-CMD /deploy.sh
+CMD "sh /deploy.sh"
