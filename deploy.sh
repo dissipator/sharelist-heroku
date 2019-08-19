@@ -2,16 +2,15 @@ apk add --update openssl
 
 cd /app
 
-wget https://github.com/dissipator/sharelist/archive/master.zip -O sharelist.zip
-unzip sharelist.zip
+git clone https://github.com/dissipator/sharelist.git
 
-cd /app/sharelist-master
+cd /app/sharelist
 npm install
 
 if echo "$CONFIG" | grep -q -i "^http"; then
-  wget --no-check-certificate $CONFIG -O /app/sharelist-master/cache/config.json
+  wget --no-check-certificate $CONFIG -O /app/sharelist/cache/config.json
 else
-  echo -e "$CONFIG" > /app/sharelist-master/cache/config.json
+  echo -e "$CONFIG" > /app/sharelist/cache/config.json
 fi
 
 npm start
