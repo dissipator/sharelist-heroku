@@ -1,9 +1,9 @@
 FROM node:8-alpine
 MAINTAINER reruin
 
-ENV PORT 33001
+ENV PORT 443
 
-EXPOSE 33001
+EXPOSE 443
 
 RUN mkdir -m 777 /app 
 
