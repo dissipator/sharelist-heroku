@@ -9,10 +9,6 @@ cd /app/sharelist-master
 
 npm install
 
-if echo "$CONFIG" | grep -q -i "^http"; then
-  wget --no-check-certificate $CONFIG -O /app/sharelist-master/cache/config.json
-else
-  echo -e "$CONFIG" > /app/sharelist-master/cache/config.json
-fi
+cp /app/sharelist-master/app/config.json  /app/sharelist-master/cache/config.json
 
 npm start
